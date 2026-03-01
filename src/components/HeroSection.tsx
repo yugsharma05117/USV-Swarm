@@ -3,7 +3,7 @@ import { Anchor, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-ocean.jpg";
 import index from "@/pages/Index";
-
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -35,13 +35,14 @@ const HeroSection = () => {
             USV Swarm
           </span>
         </div>
-        
+         <Link to="index">
         <Button
           variant="outline"
-          className="border-primary/50 text-primary-foreground bg-primary/10 hover:bg-primary/20 backdrop-blur-sm font-display" onClick={() => window.location.href = "/index"}
+          className="border-primary/50 text-primary-foreground bg-primary/10 hover:bg-primary/20 backdrop-blur-sm font-display" 
         >
           Launch Simulation →
         </Button>
+        </Link>
       </nav>
 
       {/* Hero content */}
@@ -85,20 +86,23 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
         >
+          <Link to="/index">
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-display px-8 shadow-glow-primary"onClick={() => window.location.href = "/index"}
-          >
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-display px-8 shadow-glow-primary">
             <Play className="w-4 h-4 mr-2" />
             Start Simulation
           </Button>
+          </Link>
+          <Link to="/learn-more">
           <Button
             size="lg"
             variant="outline"
-            className="border-primary-foreground/20 text-primary-white rounded-full font-display px-8" onClick={() => window.location.href = "/learn-more"}
+            className="border-primary-foreground/20 text-primary-white rounded-full font-display px-8" 
           >
             Learn More
           </Button>
+           </Link>
         </motion.div>
       </div>
 

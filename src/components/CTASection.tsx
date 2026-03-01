@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const CTASection = () => {
   return (
     <section className="py-24 px-6 bg-background">
@@ -20,21 +20,25 @@ const CTASection = () => {
             swarm simulation platform.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link to="/index">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-display px-8 shadow-glow-primary" onClick={()=>window.location.href="/index"}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-display px-8 shadow-glow-primary" 
             >
               <Play className="w-4 h-4 mr-2" />
               Launch Simulation
             </Button>
+            </Link>
+            <Link to="/learn-more">
             <Button
               size="lg"
               variant="outline"
-              className="font-display px-8" onClick={()=>window.location.href="/learn-more"}
-            >
+              className="font-display px-8">
               Contact Team
               <ArrowRight className="w-4 h-4 ml-2" />
+              
             </Button>
+            </Link>
           </div>
         </motion.div>
       </div>
