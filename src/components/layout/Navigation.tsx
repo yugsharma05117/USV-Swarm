@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Map, LayoutDashboard, BarChart3, Shield, Radio } from 'lucide-react';
 
 const navItems = [
-  { path: '/', label: 'Ocean Map', icon: Map },
+  { path: '/index', label: 'Ocean Map', icon: Map },
   { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { path: '/analytics', label: 'Analytics', icon: BarChart3 },
 ];
