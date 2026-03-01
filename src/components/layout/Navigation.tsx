@@ -6,6 +6,7 @@ const navItems = [
   { path: '/index', label: 'Ocean Map', icon: Map },
   { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { path: '/analytics', label: 'Analytics', icon: BarChart3 },
+  { path: '/learn-more', label: 'Learn More', icon: Shield },
 ];
 
 export function Navigation() {
